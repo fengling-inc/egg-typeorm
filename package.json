@@ -1,17 +1,19 @@
 {
   "name": "@zhuowenli/egg-typeorm",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "TypeORM for Egg.js",
-  "main": "app.ts",
+  "main": "app.js",
   "repository": "git@github.com:fengling-inc/egg-typeorm.git",
   "author": "zhuowenli <zhuowenligg@gmail.com>",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "tsc": "tsc -p tsconfig.json"
+    "tsc": "tsc -p tsconfig.json",
+    "build": "npm run tsc"
   },
   "files": [
     "app.ts",
+    "app.js",
     "README.md"
   ],
   "dependencies": {
