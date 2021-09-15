@@ -51,6 +51,8 @@ async function connectDB(app: Application) {
     const config = handleConfig(app.config.typeorm);
     useContainer(Container);
 
+    console.log('✅', config);
+
     const connection = await createConnection(config);
     app.context.connection = connection;
 }
@@ -213,6 +215,7 @@ export default async (app: Application) => {
             app.logger.info('[typeorm]', '数据链接成功');
         } catch (error) {
             app.logger.error('[typeorm]', '数据库链接失败');
+            app.logger.error(config);
             app.logger.error(error);
         }
     });
